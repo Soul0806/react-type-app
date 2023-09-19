@@ -1,0 +1,28 @@
+@mixin moveup($offset){ /* wrapper mixin which accepts input parameter */
+   @keyframes moveup {
+      from {transform : translateY(0)}
+      to {transform : translateY($offset)}
+   }
+}
+//flex
+
+@mixin flex-col($gap: 0) {
+   display: flex;
+   flex-direction: column;
+   gap: $gap;
+}
+
+@mixin flex-row($gap: 0) {
+   display: flex;
+   flex-direction: row;
+   gap: $gap;
+}
+
+// border 
+
+@mixin border($color: #000, $radius: 10px) {
+   border: 1px solid $color;
+   border-radius: $radius;
+}
+
+//color 

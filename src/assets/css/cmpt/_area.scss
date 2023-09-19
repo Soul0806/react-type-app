@@ -1,0 +1,8 @@
+.area-wrapper {
+    @include flex-col(.625rem);
+
+    a {
+      padding: .8rem 1.2rem;
+      @include border();
+    }
+  }

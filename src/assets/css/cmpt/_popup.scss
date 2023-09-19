@@ -1,0 +1,36 @@
+.modal {
+    form {
+        // position: relative;
+        text-align: left;
+        >* {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+            gap: 5px;
+        }
+
+        .text-pay,
+        .note {
+            padding: 0 5px;
+        }
+
+
+        input {
+            padding: .1rem .5rem;
+            @include border(#d8d2d2, 0.625rem);
+            transition: all 0.3s ease;
+            opacity: .6;
+
+            &:focus {
+                opacity: 1;
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(21, 156, 228, 0.4);
+                transform: scale(1.04);
+            }
+        }
+    }
+}
+
+.sale_popup {
+    display: flex;
+    flex-direction: column;
+}

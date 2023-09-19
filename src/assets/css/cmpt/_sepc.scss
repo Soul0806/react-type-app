@@ -1,0 +1,48 @@
+.spec-wrapper {
+    @include flex-col(.625rem);
+    width: max-content;
+
+    [data-open-modal] {
+        font-size: 14px;
+    }
+
+    .behavior {
+      position: relative;
+      @include flex-row(.625rem);
+      .act {
+        text-align: right;
+      }
+      .selling {
+        font-size: 14px;
+      }
+    }
+
+    .item {
+    @include flex-row(.625rem);
+      .spec {
+        flex-grow: 1
+      }
+      .mode {
+        @include flex-row;
+      }
+      .red {
+        color: var(--active);
+      }
+
+      .button {
+        display: inline-block;
+        width: 25px;
+        @include border(#979797, 0.3125rem);
+        margin: 0 10px;
+        transform: scale(1.1);
+      }
+
+      .minor {
+        background-color: lightcoral;
+      }
+
+      .increase {
+        background-color: limegreen;
+      }
+    }
+  }

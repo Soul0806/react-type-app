@@ -1,0 +1,167 @@
+.input-icon {
+  position: relative;
+
+  .price {
+    width: 5rem;
+    padding-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    &:focus {
+      opacity: 1;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(21, 156, 228, 0.4);
+      transform: scale(1.04);
+    }
+  }
+
+  i {
+    position: absolute;
+    display: block;
+    transform: translate(0, -50%);
+    top: 50%;
+    pointer-events: none;
+    width: 25px;
+    text-align: center;
+    font-style: normal;
+  }
+}
+
+.form__group {
+  // width: 10%;
+  position: relative;
+  padding: 15px 0 0;
+
+  &~span {
+    display: block;
+    padding: 10px 0 0;
+  }
+
+  .form__input {
+    width: 100%;
+    outline: 0;
+    font-size: 1rem;
+    border: 0;
+    border-bottom: 2px solid gray;
+    padding: 4px 0;
+    // background-color: transparent;
+    // background-color: red;
+
+    &~label {
+      display: block;
+      position: absolute;
+      font-size: 1rem;
+      transition: .2s;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown {
+      &~label {
+        font-size: 1rem;
+        top: 18px;
+      }
+    }
+
+    &:focus {
+      &~label {
+        position: absolute;
+        top: 0;
+        display: block;
+        outline: 0;
+        font-size: .5rem;
+      }
+    }
+  }
+}
+
+// .form__group {
+//   position: relative;
+
+//   label {
+//     position: absolute;
+//     top: 0;
+//   }
+// }
+
+// .form__input {
+//   width: 100%;
+// }
+
+
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.f-1 {
+  flex: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.f-g-1 {
+  flex-grow: 1;
+}
+
+.a-i-center {
+  align-items: center;
+}
+
+.a-i-start {
+  align-items: flex-start;
+}
+
+
+.j-c-end {
+  justify-content: flex-end;
+}
+
+.j-c-between {
+  justify-content: space-between;
+}
+
+.g-1 {
+  gap: 10px;
+}
+
+.d-sign {
+  &:before {
+    content: '$',
+  }
+}
+
+.abs {
+  position: absolute;
+}
+
+.rel {
+  position: relative;
+}
+
+.float-right {
+  float: right;
+}
+
+.r-0 {
+  right: 0;
+}
+
+.invalid {
+  color: var(--invalid);
+}
+
+.red {
+  background-color: rgb(243, 156, 156);
+}

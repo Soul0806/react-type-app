@@ -1,0 +1,21 @@
+%ptr {
+    cursor: pointer;
+}
+
+%flex {
+    display: flex;
+}
+
+%f-g-1 {
+    flex-grow: 1;
+}
+
+%g-1 {
+    gap: 10px;
+}
+
+%d-sign {
+    &:before {
+        content: '$',
+    }
+}

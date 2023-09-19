@@ -1,0 +1,20 @@
+.sale-wrapper {
+  display: flex;
+  flex-direction: column;
+  @extend %g-1;
+
+  .arrow-back,
+  .arrow-forward {
+    @extend %ptr;
+  }
+
+  .created-at {
+    // width: calc(100% + 10%);
+    // color: red;
+    // justify-self: flex-end;
+  }
+
+  .action {
+    text-align: right;
+  }
+}

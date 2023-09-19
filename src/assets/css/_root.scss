@@ -1,0 +1,47 @@
+body,
+#root,
+#container {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+:root {
+  --active: #ff0000;
+  --inactive: #cac7c7;
+  --invalid: #ff0000;
+}
+
+input {
+  outline: 0;
+}
+
+* {
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+dialog {
+  width: 50%;
+  opacity: 0;
+  transform: opacity 2s;
+
+  // opacity: 0;
+  .menu {
+    text-align: right;
+
+    .dialog__close {}
+  }
+}
+
+dialog[open] {
+  opacity: 1;
+  // transform: ease-in 2s;
+}
+
+[popover] {
+  inset: unset;
+  bottom: anchor(top);
+}

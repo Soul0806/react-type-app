@@ -1,0 +1,35 @@
+.todo-wrapper {
+    display: flex;
+    gap: 2.5rem;
+
+    .tag {
+
+        .menu,
+        .action {
+            text-align: right;
+        }
+
+        .action {
+            margin-top: 1rem;
+        }
+    }
+
+    .selected__tags {
+        display: flex;
+        gap: 1rem;
+
+        >span {
+            padding: .25rem .5rem;
+            border: 1px solid black;
+            border-radius: .5rem;
+        }
+
+    }
+
+    form {
+        [name=todo] {
+            margin: 0 .5rem;
+        }
+    }
+
+}
