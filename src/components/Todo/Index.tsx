@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, MutableRefObject } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Fetch Data
@@ -15,7 +15,11 @@ import { capitalize, set } from "lodash";
 import { isEmpty } from "lodash";
 import FormCheck from "../Custom/FromCheck";
 
-
+type TodoProps = {
+    id: null;
+    todo: FormDataEntryValue;
+    createdAt: string;
+}
 
 const getTag = async () => {
     const payload = { fileName: 'static/test.json' };
@@ -33,7 +37,7 @@ const Todo = () => {
 
     const ref = useRef(false);
     const refTag = useRef('');
-    const refDialog = useRef(null);
+    const refDialog = useRef() as MutableRefObject<HTMLDialogElement>;
 
     const navigate = useNavigate();
 
@@ -59,7 +63,7 @@ const Todo = () => {
         setInvalid(false);
     }
 
-    const handelSubmit = (e) => {
+    const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const todo = formData.get('todo');

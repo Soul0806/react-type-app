@@ -3,6 +3,12 @@ import { axi } from "../../lib/axios";
 import { get, isEmpty } from "lodash";
 import API from "../../api";
 
+type TodoType = {
+    id: string,
+    todo: string,
+    createdAt: string
+}
+
 const getGroupData = (data) => {
     const groupData = {}
 
@@ -34,7 +40,7 @@ const getTodo = async () => {
 }
 
 const useTodos = () => {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState<TodoType[]>([]);
     const [id, setId] = useState(null);
 
     useEffect(() => {
